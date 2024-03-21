@@ -33,5 +33,12 @@ add_library(${CMAKE_PROJECT_NAME} SHARED
 # build script, prebuilt third-party libraries, or Android system libraries.
 target_link_libraries(${CMAKE_PROJECT_NAME}
         # List libraries link to the target library
+        spdlog
+        ${log-lib}
         android
         log)
+
+add_library(spdlog STATIC IMPORTED)
+set_target_properties(spdlog PROPERTIES IMPORTED_LOCATION
+        /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/spdlog/build/${ANDROID_ABI}/libspdlog.a)
+target_include_directories(fclient PUBLIC /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/spdlog/spdlog/include)
