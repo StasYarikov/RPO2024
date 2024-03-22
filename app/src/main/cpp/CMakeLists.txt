@@ -34,6 +34,7 @@ add_library(${CMAKE_PROJECT_NAME} SHARED
 target_link_libraries(${CMAKE_PROJECT_NAME}
         # List libraries link to the target library
         spdlog
+        mbedcrypto
         ${log-lib}
         android
         log)
@@ -41,4 +42,13 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
 add_library(spdlog STATIC IMPORTED)
 set_target_properties(spdlog PROPERTIES IMPORTED_LOCATION
         /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/spdlog/build/${ANDROID_ABI}/libspdlog.a)
-target_include_directories(fclient PUBLIC /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/spdlog/spdlog/include)
+target_include_directories(fclient PUBLIC
+        /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/spdlog/spdlog/include)
+
+add_library(mbedcrypto SHARED IMPORTED)
+set_target_properties(mbedcrypto PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_CURRENT_SOURCE_DIR}/../nativeLibs/${ANDROID_ABI}/libmbedcrypto.so)
+
+target_include_directories(fclient PUBLIC
+        /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/mbedtls/mbedtls/include
+)

@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #ABI=armaebi-v7a
-#ABI=x86
-ABI=arm64-v8a
+ABI=x86
+#ABI=arm64-v8a
 #ABI=x86_64
 
 ANDROID_NDK=/Users/stasikiarikov/Library/Android/sdk/ndk/

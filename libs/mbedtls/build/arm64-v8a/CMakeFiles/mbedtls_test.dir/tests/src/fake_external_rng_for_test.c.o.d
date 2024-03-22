@@ -1,0 +1,30 @@
+CMakeFiles/mbedtls_test.dir/tests/src/fake_external_rng_for_test.c.o: \
+  /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/mbedtls/mbedtls/tests/src/fake_external_rng_for_test.c \
+  /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/mbedtls/mbedtls/tests/include/test/fake_external_rng_for_test.h \
+  /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/mbedtls/mbedtls/include/mbedtls/build_info.h \
+  /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/mbedtls/mbedtls/include/mbedtls/mbedtls_config.h \
+  /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/mbedtls/mbedtls/include/mbedtls/config_psa.h \
+  /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/mbedtls/mbedtls/include/psa/crypto_legacy.h \
+  /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/mbedtls/mbedtls/include/psa/crypto_adjust_config_synonyms.h \
+  /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/mbedtls/mbedtls/include/mbedtls/config_adjust_psa_superset_legacy.h \
+  /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/mbedtls/mbedtls/include/mbedtls/config_adjust_psa_from_legacy.h \
+  /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/mbedtls/mbedtls/include/psa/crypto_adjust_config_key_pair_types.h \
+  /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/mbedtls/mbedtls/include/psa/crypto_adjust_auto_enabled.h \
+  /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/mbedtls/mbedtls/include/mbedtls/config_adjust_legacy_crypto.h \
+  /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/mbedtls/mbedtls/include/mbedtls/config_adjust_x509.h \
+  /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/mbedtls/mbedtls/include/mbedtls/config_adjust_ssl.h \
+  /Users/stasikiarikov/AndroidStudioProjects/fclient/libs/mbedtls/mbedtls/include/mbedtls/check_config.h \
+  /Users/stasikiarikov/Library/Android/sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/17/include/limits.h \
+  /Users/stasikiarikov/Library/Android/sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/limits.h \
+  /Users/stasikiarikov/Library/Android/sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/sys/cdefs.h \
+  /Users/stasikiarikov/Library/Android/sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/android/versioning.h \
+  /Users/stasikiarikov/Library/Android/sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/android/api-level.h \
+  /Users/stasikiarikov/Library/Android/sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/bits/get_device_api_level_inlines.h \
+  /Users/stasikiarikov/Library/Android/sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/android/ndk-version.h \
+  /Users/stasikiarikov/Library/Android/sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/17/include/float.h \
+  /Users/stasikiarikov/Library/Android/sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/linux/limits.h \
+  /Users/stasikiarikov/Library/Android/sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/bits/posix_limits.h \
+  /Users/stasikiarikov/Library/Android/sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/17/include/stdint.h \
+  /Users/stasikiarikov/Library/Android/sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/stdint.h \
+  /Users/stasikiarikov/Library/Android/sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/bits/wchar_limits.h \
+  /Users/stasikiarikov/Library/Android/sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/17/include/stddef.h
