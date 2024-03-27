@@ -3,7 +3,12 @@ package ru.iu3.fclient;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.apache.commons.codec.DecoderException;
+import org.apache.commons.codec.binary.Hex;
 
 import java.util.Arrays;
 
@@ -39,14 +44,32 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(Arrays.toString(key));
 
         // Example of a call to a native method
-        TextView tv = binding.sampleText;
-        tv.setText(stringFromJNI());
+//        TextView tv = binding.sampleText;
+//        tv.setText(stringFromJNI());
+    }
+
+    public void onButtonClick(View v)
+    {
+        Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT).show();
     }
 
     /**
      * A native method that is implemented by the 'fclient' native library,
      * which is packaged with this application.
      */
+    public static byte[] stringToHex(String s)
+    {
+        byte[] hex;
+        try
+        {
+            hex = Hex.decodeHex(s.toCharArray());
+        }
+        catch (DecoderException ex)
+        {
+            hex = null;
+        }
+        return hex;
+    }
     public native String stringFromJNI();
     public static native int initRng();
     public static native byte[] randomBytes(int no);
