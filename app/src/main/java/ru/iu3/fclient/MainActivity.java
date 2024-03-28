@@ -1,7 +1,13 @@
 package ru.iu3.fclient;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -23,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private ActivityMainBinding binding;
+    ActivityResultLauncher activityResultLauncher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,14 +50,22 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(res);
         System.out.println(Arrays.toString(key));
 
-        // Example of a call to a native method
-//        TextView tv = binding.sampleText;
-//        tv.setText(stringFromJNI());
+        activityResultLauncher  = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                        if (result.getResultCode() == Activity.RESULT_OK) {
+                            Intent data1 = result.getData();
+                            // обработка результата
+                            String pin = data1.getStringExtra("pin");
+                            Toast.makeText(MainActivity.this, pin, Toast.LENGTH_SHORT).show();
+                        }
+                });
     }
 
     public void onButtonClick(View v)
     {
-        Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT).show();
+        Intent it = new Intent(this, PinpadActivity.class);
+        activityResultLauncher.launch(it);
     }
 
     /**
