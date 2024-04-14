@@ -1,18 +1,15 @@
 package ru.iu3.backend.controllers;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+import ru.iu3.backend.models.Artists;
 import ru.iu3.backend.models.Country;
 import ru.iu3.backend.repositories.CountryRepository;
-
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1")
@@ -26,6 +23,15 @@ public class CountryController {
         return countryRepository.findAll();
     }
 
+    @GetMapping("/countries/{id}/artists")
+    public ResponseEntity<List<Artists>> getCountryArtists(@PathVariable(value = "id") Long countryId) {
+        Optional<Country> cc = countryRepository.findById(countryId);
+        if (cc.isPresent()) {
+            return ResponseEntity.ok(cc.get().artists);
+        }
+        return ResponseEntity.ok(new ArrayList<Artists>());
+    }
+
     @PostMapping("/countries")
     public ResponseEntity<Object> createCountry(@RequestBody Country country)
             throws Exception {
@@ -36,7 +42,7 @@ public class CountryController {
         catch(Exception ex) {
             String error;
             if (ex.getMessage().contains("countries.name_UNIQUE"))
-                error = "countyalreadyexists";
+                error = "countryalreadyexists";
             else
                 error = "undefinederror";
             Map<String, String>
@@ -77,5 +83,5 @@ public class CountryController {
         return ResponseEntity.ok(resp);
     }
 
-    
+
 }
