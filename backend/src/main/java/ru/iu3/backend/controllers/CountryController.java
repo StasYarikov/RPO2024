@@ -42,9 +42,9 @@ public class CountryController {
         catch(Exception ex) {
             String error;
             if (ex.getMessage().contains("countries.name_UNIQUE"))
-                error = "countryalreadyexists";
+                error = "country already exists";
             else
-                error = "undefinederror";
+                error = "undefined error";
             Map<String, String>
                     map =  new HashMap<>();
             map.put("error", error);

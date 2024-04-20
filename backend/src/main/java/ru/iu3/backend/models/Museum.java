@@ -2,7 +2,7 @@ package ru.iu3.backend.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -31,13 +31,11 @@ public class Museum {
 
     @JsonIgnore
     @OneToMany
-    public List<Painting>
-            paintings = new ArrayList<>();
+    public List<Painting> paintings = new ArrayList<>();
 
     @JsonIgnore
     @ManyToMany
     @JoinTable(name = "users_museums", joinColumns = @JoinColumn(name = "museum_id"),
             inverseJoinColumns = @JoinColumn(name = "user_id"))
-    public Set<User>
-            users = new HashSet<>();
+    public Set<User> users = new HashSet<>();
 }

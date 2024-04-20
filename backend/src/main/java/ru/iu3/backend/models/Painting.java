@@ -1,8 +1,7 @@
 package ru.iu3.backend.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
-import ru.iu3.backend.models.Museum;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "paintings")
