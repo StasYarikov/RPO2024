@@ -17,9 +17,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Enumeration;
 
-public class AuthentificationFilter extends AbstractAuthenticationProcessingFilter {
+public class AuthenticationFilter extends AbstractAuthenticationProcessingFilter {
 
-    AuthentificationFilter(final RequestMatcher requiresAuth) {
+    AuthenticationFilter(final RequestMatcher requiresAuth) {
         super(requiresAuth);
     }
 

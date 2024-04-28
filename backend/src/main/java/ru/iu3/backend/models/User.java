@@ -1,5 +1,7 @@
 package ru.iu3.backend.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -25,18 +27,22 @@ public class User {
     @Column(name = "login", nullable = false, unique = true)
     public String login;
 
+    @JsonIgnore
     @Column(name = "password")
     public String password;
 
+    @JsonIgnore
     @Column(name = "email", nullable = false, unique = true)
     public String email;
 
+    @JsonIgnore
     @Column(name = "salt")
     public String salt;
 
     @Column(name = "token")
     public String token;
 
+    @JsonIgnore
     @Column(name = "activity")
     public LocalDateTime activity;
 

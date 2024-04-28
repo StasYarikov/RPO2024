@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Component
-public class AuthentificationProvider extends AbstractUserDetailsAuthenticationProvider {
+public class AuthenticationProvider extends AbstractUserDetailsAuthenticationProvider {
 
     @Value("${private.session-timeout}")
     private int sessionTimeout;

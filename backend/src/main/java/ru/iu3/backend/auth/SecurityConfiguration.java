@@ -26,9 +26,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             new AntPathRequestMatcher("/api/**")
     );
 
-    AuthentificationProvider provider;
+    AuthenticationProvider provider;
 
-    public SecurityConfiguration(final AuthentificationProvider authenticationProvider) {
+    public SecurityConfiguration(final AuthenticationProvider authenticationProvider) {
         super();
         this.provider = authenticationProvider;
     }
@@ -64,8 +64,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    AuthentificationFilter authenticationFilter() throws Exception {
-        final AuthentificationFilter filter = new AuthentificationFilter(PROTECTED_URLS);
+    AuthenticationFilter authenticationFilter() throws Exception {
+        final AuthenticationFilter filter = new AuthenticationFilter(PROTECTED_URLS);
         filter.setAuthenticationManager(authenticationManager());
         //filter.setAuthenticationSuccessHandler(successHandler());
         return filter;
