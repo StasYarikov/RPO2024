@@ -15,6 +15,9 @@ public class User {
     public User() {
     }
 
+    @Transient
+    public String np;
+
     public User(Long id) {
         this.id = id;
     }
@@ -31,7 +34,6 @@ public class User {
     @Column(name = "password")
     public String password;
 
-    @JsonIgnore
     @Column(name = "email", nullable = false, unique = true)
     public String email;
 
